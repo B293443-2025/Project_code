@@ -100,7 +100,19 @@ Starts from the pre-existing `pyCalculateFDRs` output (FDR ≤ 0.05, `data/ssd1.
 
 **Mutational scanning:** `motif_prediction/mutational_scans/ClipGPS` (built-in `scan.py`), `.../Pysster` (`pysster_scan.py`, adapted from ClipGPS), and DeepCLIP variant-prediction mode — see individual scripts.
 
-## Source datasets
+## Citations
+
+### Datasets
 
 - Esteban-Serna et al., 2025 Nab3 CRAC data. GEO: [GSE276517](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE276517)
 - Bayne et al., 2021 Ssd1 CRAC data. GEO: [GSE159835](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159835)
+
+### Software
+
+- **pyCRAC** — Webb S, Hector RD, Kudla G, Granneman S. PAR-CLIP data indicate that Nrd1-Nab3-dependent transcription termination regulates expression of hundreds of protein coding genes in yeast. Genome Biol. 2014 Jan 7;15(1):R8. doi: 10.1186/gb-2014-15-1-r8. PMID: 24393166; PMCID: PMC4053934. [GitHub](https://git.ecdf.ed.ac.uk/sgrannem/pycrac)
+- **Pysster** — Budach S, Marsico A. pysster: classification of biological sequences by learning sequence and structure motifs with convolutional neural networks. Bioinformatics. 2018 Sep 1;34(17):3035-3037. doi: 10.1093/bioinformatics/bty222. PMID: 29659719; PMCID: PMC6129303. [GitHub](https://github.com/budach/pysster)
+- **ClipGPS** — Unreleased; supplied directly by the Granneman Lab (University of Edinburgh). No public repository or publication available at time of writing.
+- **DeepCLIP** — Grønning AGB, Doktor TK, Larsen SJ, Petersen USS, Holm LL, Bruun GH, Hansen MB, Hartung AM, Baumbach J, Andresen BS. DeepCLIP: predicting the effect of mutations on protein-RNA binding with deep learning. Nucleic Acids Res. 2020 Jul 27;48(13):7099-7118. doi: 10.1093/nar/gkaa530. PMID: 32558887; PMCID: PMC7367176. [GitHub](https://github.com/deepclip/deepclip)
+- **RNA-FM** — Yu H, Yang H, Sun W, Yan Z, Yang X, Zhang H, Ding Y, Li K. An interpretable RNA foundation model for exploring functional RNA motifs in plants. Nat Mach Intell. 2024;6(12):1616-1625. doi: 10.1038/s42256-024-00946-z. Epub 2024 Dec 9. PMID: 39703563; PMCID: PMC11652376. [GitHub](https://github.com/ml4bio/RNA-FM)
+- **MSipNet** — Song N, Li Z, Deng Y, Huang J, Ji Z. MsipNet: a multi-scale representation learning framework for predicting protein-RNA interaction. Int J Biol Macromol. 2026 Jan;339(Pt 2):149883. doi: 10.1016/j.ijbiomac.2025.149883. Epub 2025 Dec 23. PMID: 41448304. [GitHub](https://github.com/NJAU-CDSIC/MsipNet)
+- **ViennaRNA** — Lorenz R, Bernhart SH, Höner Zu Siederdissen C, Tafer H, Flamm C, Stadler PF, Hofacker IL. ViennaRNA Package 2.0. Algorithms Mol Biol. 2011 Nov 24;6:26. doi: 10.1186/1748-7188-6-26. PMID: 22115189; PMCID: PMC3319429. [GitHub](https://github.com/ViennaRNA/ViennaRNA)
