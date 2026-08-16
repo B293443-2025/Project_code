@@ -1,6 +1,6 @@
 # pyCRAC Benchmarking and ML-Based RNA–RBP Motif Prediction
 
-Benchmarking of pyCRAC v1.5.2 vs v2.0.0, and machine-learning motif prediction (Pysster, ClipGPS, DeepCLIP, MSipNet) on Nab3 and Ssd1 CRAC datasets.
+Benchmarking of pyCRAC v1.5.2 vs v2.0.0, and machine-learning RNA-RBP binding prediction using Pysster, ClipGPS (unreleased), DeepCLIP and MSipNet on Nab3 and Ssd1 CRAC datasets.
 
 ## Repository structure
 
@@ -66,7 +66,7 @@ Generate the chromosome-length files with pyCRAC once the FASTA is downloaded:
 pyCalculateChromosomeLengths.py -f <genome.fa> -o <chrom_lengths.txt>
 ```
 
-> **Note on relative paths:** scripts and notebooks in this repo reference reference/data files via relative paths set up for this exact directory layout. If a script errors with a missing file, check the path variables near the top of the script/notebook and point them at wherever you've placed the downloaded files.
+> **Note on relative paths:** scripts and notebooks in this repo reference reference/data files via relative paths set up for this exact directory layout. If a script errors with a missing file, check the path variables near the top of the script/notebook and point them at wherever you've placed the downloaded files. All scripts assume package code cloned from github repositories (except Pysster) are present in the relevant directories from where the scripts are being executed. 
 
 ## Software environments
 
