@@ -66,7 +66,7 @@ Generate the chromosome-length files with pyCRAC once the FASTA is downloaded:
 pyCalculateChromosomeLengths.py -f <genome.fa> -o <chrom_lengths.txt>
 ```
 
-> **Note on relative paths:** scripts and notebooks in this repo reference reference/data files via relative paths set up for this exact directory layout. If a script errors with a missing file, check the path variables near the top of the script/notebook and point them at wherever you've placed the downloaded files. All scripts assume package code cloned from github repositories (except Pysster) are present in the relevant directories from where the scripts are being executed. 
+> **Note on relative paths:** scripts and notebooks in this repo reference reference/data files via relative paths set up for this exact directory layout. If a script errors with a missing file, check the path variables near the top of the script/notebook and point them at wherever you've placed the downloaded files. The package code (except Pysster) required to run some scripts is not included in these directories and must be cloned from the corresponding GitHub repositories and placed in the expected locations.
 
 ## Software environments
 
