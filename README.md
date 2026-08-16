@@ -47,7 +47,7 @@ Raw sequencing files and reference genomes
 
 ### `data/references/`
 
-Place downloaded reference files here, keeping datasets separate:
+Place downloaded reference files here:
 
 ```
 data/references/
