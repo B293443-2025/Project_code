@@ -79,6 +79,7 @@ Conda environments were used per tool; Python 3.10.20 unless noted otherwise. `e
 | Pysster v1.2.2 | 3.6.13 | |
 | DeepCLIP v1.0.0 | 2.7.15 | |
 | RNA-FM | 3.8.11 | environment YAML supplied |
+| MSipNet | 3.10 | environment YAML supplied |
 
 Deep-learning packages (except Pysster, installed via pip) were installed by cloning the respective repos and following their instructions / bundled `environment.yml`. Scripts from these packages are assumed to be within the relevant directories.
 
@@ -89,9 +90,9 @@ Hardware used for original runs: Ubuntu 24.04.4 LTS, Intel Xeon Gold 5320, 251 G
 **Nab3**
 1. Download raw FASTQ + `.novo` file (OpenNGS / GSE276517).
 2. `pyReadCounters` with the R64-1-1.75 GTF → read-count GTF (equivalent to `data/nab3.tar.gz`).
-3. `pyCalculateFDRs` (`-r 100`, FDR ≤ 0.05, 100 background iterations) → peak GTF.
+3. `pyCalculateFDRs` (`-r 100`, FDR ≤ 0.05, 100 background iterations) → peak/intervals GTF.
 4. `pyNormalizeIntervalLengths.py` → fixed-length intervals (50nt and 100nt tested).
-5. `motif_prediction/Data_preparation/Motif_pipeline.ipynb` → labelled positive/negative FASTA datasets (see script for overlap removal / negative-sampling logic).
+5. `motif_prediction/Data_preparation/Motif_pipeline.ipynb` → labelled positive/negative FASTA datasets.
 6. Train models: `motif_prediction/Pysster/Pysster_fit.py`, `motif_prediction/ClipGPS/custom_nab3_pipeline.sh`.
 7. Benchmarking: `pycrac_benchmark/test.sh`, `test_timing.sh`.
 
