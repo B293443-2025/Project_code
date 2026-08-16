@@ -95,7 +95,7 @@ Hardware used for original runs: Ubuntu 24.04.4 LTS, Intel Xeon Gold 5320, 251 G
 4. Train models: `motif_prediction/Pysster/Pysster_fit.py`, `motif_prediction/ClipGPS/custom_nab3_pipeline.sh`.
 
 **Ssd1**
-Starts from the pre-existing `pyCalculateFDRs` output (FDR ≤ 0.05, `data/ssd1.tar.gz`). Steps 4–6 apply with the EF4.74 reference and 100nt/300nt intervals; use `custom_ssd1_pipeline.sh` for ClipGPS.
+Starts from the pre-existing `pyCalculateFDRs` output (FDR ≤ 0.05, `data/ssd1.tar.gz`). Steps 2-4 apply with the EF4.74 reference and 100nt/300nt intervals; use `custom_ssd1_pipeline.sh` for ClipGPS.
 
 **Mutational scanning:** `motif_prediction/mutational_scans/ClipGPS` (built-in `scan.py`), `.../Pysster` (`pysster_scan.py`, adapted from ClipGPS), and DeepCLIP variant-prediction mode — see individual scripts.
 
