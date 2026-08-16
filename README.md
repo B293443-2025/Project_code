@@ -88,12 +88,11 @@ Hardware used for original runs: Ubuntu 24.04.4 LTS, Intel Xeon Gold 5320, 251 G
 ## ML Pipeline
 
 **Nab3**
-1. Download raw FASTQ + `.novo` file (OpenNGS / GSE276517).
-2. `pyReadCounters` with the R64-1-1.75 GTF → read-count GTF (equivalent to `data/nab3.tar.gz`).
-3. `pyCalculateFDRs` (`-r 100`, FDR ≤ 0.05, 100 background iterations) → peak/intervals GTF.
-4. `pyNormalizeIntervalLengths.py` → fixed-length intervals (50nt and 100nt tested).
-5. `motif_prediction/Data_preparation/Motif_pipeline.ipynb` → labelled positive/negative FASTA datasets.
-6. Train models: `motif_prediction/Pysster/Pysster_fit.py`, `motif_prediction/ClipGPS/custom_nab3_pipeline.sh`.
+
+1. Nab3 reads GTF (in `data/nab3.tar.gz`) → pyCRAC `pyCalculateFDRs` (`-r 100`, FDR ≤ 0.05, 100 background iterations) → peak/intervals GTF.
+2. `pyNormalizeIntervalLengths.py` → fixed-length intervals (50nt and 100nt tested).
+3. `motif_prediction/Data_preparation/Motif_pipeline.ipynb` → labelled positive/negative FASTA datasets.
+4. Train models: `motif_prediction/Pysster/Pysster_fit.py`, `motif_prediction/ClipGPS/custom_nab3_pipeline.sh`.
 
 **Ssd1**
 Starts from the pre-existing `pyCalculateFDRs` output (FDR ≤ 0.05, `data/ssd1.tar.gz`). Steps 4–6 apply with the EF4.74 reference and 100nt/300nt intervals; use `custom_ssd1_pipeline.sh` for ClipGPS.
