@@ -22,7 +22,7 @@ args = parser.parse_args()
 output_folder = f"pysster_scan_{args.p}_{args.n}"
 if not os.path.isdir(output_folder):
     os.makedirs(output_folder)
-
+#scanner code adapter from ClipGPS scan.py
 model_path = args.m
 NTS       = ["A", "C", "G", "U"]
 NT_IDX    = {nt: i for i, nt in enumerate(NTS)}

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script adapted from pyCRAC v2.0.0
 echo
 echo "##### testing all pyCRAC tools #####"
 echo

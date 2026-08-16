@@ -2,8 +2,7 @@ import argparse
 import os, subprocess
 import pandas as pd
 
-home = os.path.expanduser("~")
-
+#scanner code adapter from ClipGPS scan.py
 NTS = ["A", "C", "G", "U"]
 
 parser = argparse.ArgumentParser()

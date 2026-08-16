@@ -50,13 +50,13 @@ PARAMS_NAB3 = {"conv_num": [1, 2], "kernel_num": [10], "kernel_len": [6, 10], "d
 PARAMS_SSD1 = {"conv_num": [1, 2], "kernel_num": [10, 20], "kernel_len": [10], "dropout_input": [0.05, 0.1]}
 
 configs = [
-    # {"protein": "Nab3", "length": "50", "output_folder": "outputs_50nt","structure": False,  "params": PARAMS_NAB3},
-    # {"protein": "Nab3", "length": "100", "output_folder": "outputs_100nt","structure": False,  "params": PARAMS_NAB3},
-    # {"protein": "Nab3", "length": "100", "output_folder": "outputs_Nab3_100nt_struct","structure": True,  "params": PARAMS_NAB3},
+    {"protein": "Nab3", "length": "50", "output_folder": "outputs_50nt","structure": False,  "params": PARAMS_NAB3},
+    {"protein": "Nab3", "length": "100", "output_folder": "outputs_100nt","structure": False,  "params": PARAMS_NAB3},
+    {"protein": "Nab3", "length": "100", "output_folder": "outputs_Nab3_100nt_struct","structure": True,  "params": PARAMS_NAB3},
     {"protein": "Ssd1", "length": "100", "output_folder": "outputs_Ssd1_100nt","structure": False,  "params": PARAMS_SSD1},
-    # {"protein": "Ssd1", "length": "100", "output_folder": "outputs_Ssd1_100nt_struct","structure": True,  "params": PARAMS_SSD1},
-    # {"protein": "Ssd1", "length": "300", "output_folder": "outputs_Ssd1_300nt","structure": False, "params": PARAMS_SSD1},
-    # {"protein": "Ssd1", "length": "300", "output_folder": "outputs_Ssd1_300nt_struct","structure": True,  "params": PARAMS_SSD1}
+    {"protein": "Ssd1", "length": "100", "output_folder": "outputs_Ssd1_100nt_struct","structure": True,  "params": PARAMS_SSD1},
+    {"protein": "Ssd1", "length": "300", "output_folder": "outputs_Ssd1_300nt","structure": False, "params": PARAMS_SSD1},
+    {"protein": "Ssd1", "length": "300", "output_folder": "outputs_Ssd1_300nt_struct","structure": True,  "params": PARAMS_SSD1}
 ]
 
 for con in configs:
@@ -98,9 +98,7 @@ for con in configs:
     utils.save_model(model, output_folder_p+"/"+"model.pkl")
 
 
-    # In[44]:
-
-
+# interpretation and model fitting code adapted from tutorial: https://github.com/budach/pysster/blob/master/tutorials/workflow_rna_editing.ipynb
     from sklearn.preprocessing import label_binarize
     from sklearn.metrics import matthews_corrcoef, accuracy_score
     predictions = model.predict(data, "test")

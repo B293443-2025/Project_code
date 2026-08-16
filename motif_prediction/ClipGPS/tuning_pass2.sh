@@ -1,5 +1,7 @@
-data="ssd1_custom_intervals_vienna/ssd1_clip.parquet" 
-out="results_custom/ssd1_fit/tune_pass2"
+#!/usr/bin/bash
+#modified paths depending on dataset and best hyperparameters from tune_pass1 results accordingly, append a chosen on the model with bet vaildation performance 
+data="datasets/ssd1_100nt_clip.parquet" 
+out="ssd1_100nt_fit/tune_pass2"
 summary="$out/summary.txt"
 layers="2"
 wd="1e-5"
@@ -11,9 +13,9 @@ touch $summary
 echo "batch-size 16" >> $summary
 echo "hidden-dim 64" >> $summary
 echo "num-layers $layers" >> $summary
-echo "dropout $dropout" >> $summary
+echo "weight-decay $wd" >> $summary
 echo "num-heads 4" >> $summary
-echo "epochs 60" >> $summary
+echo "epochs 35" >> $summary
 echo "patience 5" >> $summary
 
 for dr in 0.1 0.2; do

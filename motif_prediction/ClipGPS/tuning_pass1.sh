@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-
-data="ssd1_custom_intervals_vienna/ssd1_clip.parquet" 
-out="results_custom/ssd1_fit_bilstm_auroc/tune_pass1"
+#modified paths accordingly depending on ssd1 or nab3
+data=datasets/ssd1_100nt_clip.parquet
+out="ssd1_100nt_fit/tune_pass1"
 summary="$out/summary.txt"
 
 rm $summary
@@ -39,10 +39,3 @@ for layers in 2 4; do
     --patience 5 2>&1 >> $summary
     done
 done
-
-mkdir -p results_custom/ssd1_optuna_300/
-touch results_custom/ssd1_optuna_300/summary.txt
-nohup clip-gnn-train \
-    --data ssd1_custom_intervals_vienna/ssd1_clip_300.parquet \
-    --out results_custom/ssd1_optuna_300 \
-    --tune 2>&1 >> results_custom/ssd1_optuna_300/summary.txt &

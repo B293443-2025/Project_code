@@ -1,5 +1,5 @@
 OUTPUT_DIR=Pysster_scan_results_seq_only
-MODEL=../pysster_model/model.pkl
+MODEL=../Pysster/pysster_output_Ssd1_100nt/model.pkl
 mkdir -p $OUTPUT_DIR
 cd $OUTPUT_DIR
 #wt
