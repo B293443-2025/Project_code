@@ -102,5 +102,5 @@ Starts from the pre-existing `pyCalculateFDRs` output (FDR ≤ 0.05, `data/ssd1.
 
 ## Source datasets
 
-- Esteban-Serna et al. (2025). Nab3 CRAC data. GEO: [GSE276517](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE276517)
-- Bayne et al. Ssd1 CRAC data. GEO: [GSE159835](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159835)
+- Esteban-Serna et al., 2025 Nab3 CRAC data. GEO: [GSE276517](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE276517)
+- Bayne et al., 2021 Ssd1 CRAC data. GEO: [GSE159835](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159835)
