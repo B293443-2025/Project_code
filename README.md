@@ -85,7 +85,7 @@ Deep-learning packages (except Pysster, installed via pip) were installed by clo
 
 Hardware used for original runs: Ubuntu 24.04.4 LTS, Intel Xeon Gold 5320, 251 GiB RAM, NVIDIA L40S GPU (CUDA 12.8, 46 GB VRAM).
 
-## Pipeline
+## ML Pipeline
 
 **Nab3**
 1. Download raw FASTQ + `.novo` file (OpenNGS / GSE276517).
@@ -94,7 +94,6 @@ Hardware used for original runs: Ubuntu 24.04.4 LTS, Intel Xeon Gold 5320, 251 G
 4. `pyNormalizeIntervalLengths.py` → fixed-length intervals (50nt and 100nt tested).
 5. `motif_prediction/Data_preparation/Motif_pipeline.ipynb` → labelled positive/negative FASTA datasets.
 6. Train models: `motif_prediction/Pysster/Pysster_fit.py`, `motif_prediction/ClipGPS/custom_nab3_pipeline.sh`.
-7. Benchmarking: `pycrac_benchmark/test.sh`, `test_timing.sh`.
 
 **Ssd1**
 Starts from the pre-existing `pyCalculateFDRs` output (FDR ≤ 0.05, `data/ssd1.tar.gz`). Steps 4–6 apply with the EF4.74 reference and 100nt/300nt intervals; use `custom_ssd1_pipeline.sh` for ClipGPS.
