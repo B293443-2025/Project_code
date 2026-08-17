@@ -99,7 +99,7 @@ Hardware used for original runs: Ubuntu 24.04.4 LTS, Intel Xeon Gold 5320, 251 G
      1. `motif_prediction/ClipGPS/nab3_data_preparation` → Nab3 data parquet
      2. `motif_prediction/ClipGPS/tuning_pass1.sh`
      3. select best hyperparameters (weight-decay & layers) on validation AUPR and fill in values for tune_pass2.sh
-     4. `motif_prediction/ClipGPS/tuning_pass2.sh` (repeat step iii, select best configuration on dropout & learning rate)
+     4. `motif_prediction/ClipGPS/tuning_pass2.sh` (repeat step iii, select best configuration for dropout & learning rate)
      5. `motif_prediction/ClipGPS/custom_nab3_pipeline.sh` (model interpretation plots and mutational scan)
 
    MSipNet: motif_prediction/MSipNet/pipe.ibynb
