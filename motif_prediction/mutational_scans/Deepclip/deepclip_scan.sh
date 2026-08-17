@@ -1,7 +1,7 @@
 DEEPCLIP=~/deepclip/DeepCLIP.py
-DATA=../Pysster/Ssd1_dataset_100nt/
-POS=../Pysster/Ssd1_dataset_100nt/Ssd1peaks_norm100_no_overlaps.fasta
-NEG=../Pysster/Ssd1_dataset_100nt/Ssd1peaks_norm100_negatives.fasta
+DATA=../Data_preparation/Ssd1_dataset_100nt/
+POS=../Data_preparation/Ssd1_dataset_100nt/Ssd1peaks_norm100_no_overlaps.fasta
+NEG=../Data_preparation/Ssd1_dataset_100nt/Ssd1peaks_norm100_negatives.fasta
 SEQ1=AGCAAGAAAAGGAAAGAUCGAUUCGUUCUUUUACCAUUAUCCAACUACUCUACACUCCUUUUUCGCCGAAGAAAAGAACUCUUCCAACUAAUUUUCACUC
 SEQ2=ACUACUCUACACUCCUUUUUCGCCGAAGAAAAGAACUCUUCCAACUAAUUUUCACUCCUUUAAGCAUUUUUUUUUUUUACUUUUUUACAAGUCGUAUGUU
 CHOSEN_MODEL=../Ssd1_tuning_f4_n8_l20.001
