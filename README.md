@@ -91,12 +91,19 @@ Hardware used for original runs: Ubuntu 24.04.4 LTS, Intel Xeon Gold 5320, 251 G
 
 1. Nab3 reads GTF (in `data/nab3.tar.gz`) → pyCRAC `pyCalculateFDRs` (`-r 100`, FDR ≤ 0.05, 100 background iterations) → peak/intervals GTF.
 2. `motif_prediction/Data_preparation/Motif_pipeline.ipynb` (50 and 100nt intervals)  → labelled positive/negative FASTA datasets.
-3. Train models: `motif_prediction/Pysster/Pysster_fit.py`, `motif_prediction/ClipGPS/custom_nab3_pipeline.sh`.
+3. Train models:
+   -Pysster: `motif_prediction/Pysster/Pysster_fit.py`
+   -ClipGPS:
+     1. `motif_prediction/ClipGPS/nab3_data_preparation`
+     2. Nab3 data parquet → `motif_prediction/ClipGPS/tuning_pass1.sh`
+     3. select best hyperparameters (weight-decay & layers) on validation AUPR and fill in values for tune_pass2.sh
+     4. `motif_prediction/ClipGPS/tuning_pass2.sh` (repeat step 3, select best configuration on dropout & learning rate)
+     5. `motif_prediction/ClipGPS/custom_nab3_pipeline.sh` (model interpretation plots and mutational scan)
 
 **Ssd1**
 Starts from the pre-existing `pyCalculateFDRs` output (FDR ≤ 0.05, `data/ssd1.tar.gz`). Steps 2 and 3 apply with the EF4.74 reference and 100nt/300nt intervals; use `custom_ssd1_pipeline.sh` for ClipGPS.
 
-**Mutational scanning:** `motif_prediction/mutational_scans/ClipGPS` (ClipGPS `scan.py`), `.../Pysster` (`pysster_scan.py`), and DeepCLIP (deepclip_scan.sh) variant-prediction mode — see individual scripts.
+**Mutational scanning:** `motif_prediction/mutational_scans/ClipGPS` (ClipGPS `scan.py`), `.../Pysster` (`pysster_scan_intervals.sh`), and DeepCLIP (deepclip_scan.sh) variant-prediction mode — see individual scripts.
 
 ## Citations
 
