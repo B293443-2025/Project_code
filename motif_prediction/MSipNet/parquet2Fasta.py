@@ -1,7 +1,7 @@
 #prepare structural file parquet->fasta
 import pandas as pd
 
-df_parq = pd.read_parquet("ssd1_clip.parquet")
+df_parq = pd.read_parquet("../ClipGPS/datasets/ssd1_clip.parquet")
 protein="Ssd1"
 length=str(100)
 
